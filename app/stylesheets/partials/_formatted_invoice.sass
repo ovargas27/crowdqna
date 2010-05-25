@@ -1,0 +1,76 @@
+#formatted_invoice
+  +append-bottom(2em)
+  +column(22)
+  border: 
+    width: 1px 
+    style: solid 
+    color: $darkgrey
+
+  .inner
+    +column(18)
+    +prepend(2)
+    +append-bottom(5em)
+
+    .letterhead
+      +prepend-top(2.5em)
+      +append-bottom(2.5em)      
+      +column(18)
+      +last
+      .crowd
+        +column(10)
+      
+      .big_number
+        font-size: 30pt
+        text-align: right
+        color: $darkgrey
+
+    .recipient
+      +column(9)
+
+    .summary
+      +column(8)
+      +prepend(1)
+      +last
+
+      .invoice_num
+        +column(8)
+      .invoice_date
+        +column(8)
+      .amount_due
+        +column(8)
+
+    .invoice_description
+      +prepend-top(2.5em)
+      +append-bottom(2.5em)
+      +column(18)
+
+    .items
+      .header
+        font-weight: bold
+
+      .type
+        +column(4)
+
+      .description
+        +column(5)
+
+      .quantity
+        +column(3)
+
+      .amount
+        +column(3)
+
+      .total
+        +column(3)
+        +last
+        
+      .item
+        +prepend-top(1em)
+        +column(18)
+
+    .invoice_total
+      +prepend(15)
+      +prepend-top(1.5em)
+      +column(5)
+      font-size: 16pt
+

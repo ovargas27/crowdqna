@@ -1,0 +1,54 @@
+#invoices, #outstanding_invoices, #past_invoices
+  .invoice:hover
+    background-color: $highlight
+  .invoice
+    +append-bottom(1.5em)
+    border:
+      style: solid
+      width: 1px
+      color: $darkgrey
+
+    +column(22)
+
+    .invoice_content
+      +push(1)
+      +prepend-top(1em)
+      +column(20)
+
+      .number
+        +column(5)
+        font-weight: bold
+        font-size: 14px
+
+      .company
+        +column(9)
+        font-size: 14px
+
+      .state
+        +column(2)
+        font-size: 14px
+
+      .amount
+        +column(4)
+        +last
+        text-align: right
+        font-size: 14px
+        font-weight: bold
+
+      .date
+        +column(4)
+
+      .description
+        +column(20)
+
+      .links
+        font-weight: bold
+        text-align: right
+        +column(20)
+
+        a
+          text-decoration: none
+          color: $green
+
+        a:hover
+          text-decoration: underline

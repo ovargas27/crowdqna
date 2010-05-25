@@ -1,0 +1,78 @@
+#loginform
+  +column(4)
+  +prepend(1)
+
+  .fieldWithErrors
+    input
+      background-color= !error_bg_color
+
+  .button
+    text-align: right
+    +column(4)
+    +last
+
+#form
+  +column(8)
+  +append(4)
+
+  .fieldWithErrors
+    input
+      background-color= !error_bg_color
+
+  .button
+    text-align: right
+    +column(8)
+    +last
+    +prepend-top(1.5em)
+
+  .links
+    +append-bottom(2em)
+
+    a
+      color: $green
+      font-weight: bold
+      font-size: 16px
+
+  #disclaimer
+    font-size: 11px
+    +append-bottom(2em)
+    font-style: italic
+
+#invoice_form
+  +column(9)
+  +append(1)
+
+  .invoice_item
+    .type
+      +column(9)
+    .description
+      +column(9)
+      +last
+
+    .quantity
+      +column(3)
+      input
+        width: 100px
+    .amount
+      +column(3)
+      input
+        width: 100px
+
+    .destroy
+      +column(3)
+      +last
+
+  .links
+    +append-bottom(2em)
+    +column(9)
+
+    a
+      color: $green
+      font-weight: bold
+      font-size: 16px
+
+  .button
+    text-align: right
+    +column(9)
+    +last
+    +prepend-top(1.5em)

@@ -1,0 +1,110 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset"
+
+// To configure blueprint, edit the partials/base.sass file.
+@import partials/base.sass
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import blueprint
+
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding"
+
+// To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
++blueprint
+
++blueprint-scaffolding
+
++blueprint-form-sizes(300px, 300px, 50px)
+
+$darkgrey: #464646
+$green: #96ba18
+$footer_gray: #efefef
+$highlight: #fffbcf
+$light_gray: #f8f8f8
+
+#content
+  +column(22)
+  +prepend(1)
+  min-height: 400px
+  a
+    text-decoration: none
+    color: $darkgrey
+  a:hover
+    text-decoration: underline
+  h2
+    font-size: 14px
+    font-weight: bold
+    color: $green
+
+#title
+  +prepend-top(1.5em)
+  +append-bottom(1em)
+  h1
+    font-size: 22px
+    color: $darkgrey
+    font-weight: bold
+
+@import partials/forms.sass
+
+#errors
+  +column(9)
+  +last
+  #errorExplanation
+    +error
+    h2
+      font-size: 16px
+      color: $error_color
+
+.login_errors
+  +prepend(6)
+
+input.login
+  +column(4)
+  +last
+
+#footer
+  background-color: $footer_gray
+  +column(24)
+  text-align: center
+  font-style: italic
+
+  .footer_link
+    a
+      font-weight: bold
+      color: $darkgrey
+
+#indexlinks
+  +column(22)
+  text-align: right
+  a
+    color: $green
+    font-weight: bold
+    font-size: 14px
+
+@import partials/table.sass
+
+.contact
+  +column(22)
+
+@import partials/header.sass
+@import partials/invoices.sass
+@import partials/formatted_invoice.sass
+
+#pay_now
+  +prepend-top(2em)
+  +append-bottom(2em)
+  text-align: center
+  font-weight: bold
+  a
+    color: $green
+    font-size: 30pt
+
+#total
+  font-size: 20pt
+  h2
+    font-size: 20pt
+
+#notice
+  +prepend-top(1.5em)
+  +notice
