@@ -15,5 +15,7 @@
             = link_to 'Edit', edit_admin_question_answer_url(question)
             |
             = link_to 'Delete Answer', admin_question_answer_url(question), :method => :delete, :confirm => "Are you sure?"
+            |
+            = link_to 'Delete Question', admin_question_url(question), :method => :delete, :confirm => "Are you sure?"
           - else
             = link_to 'Answer now', new_admin_question_answer_url(question)
