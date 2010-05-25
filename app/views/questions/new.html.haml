@@ -1,0 +1,8 @@
+#title
+  %h1 Ask something!
+#form
+  -form_for object do |f|
+    %div= f.text_area :body
+    .button= f.submit 'Ask'
+
+#errors= error_messages_for :company

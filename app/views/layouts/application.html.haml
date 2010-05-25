@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title= "CI Billing - #{@page_title}"
+    %title= "CI QNA"
 
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'print.css', :media => 'print'
@@ -20,8 +20,6 @@
         - if flash[:notice]
           #notice
             = flash[:notice]
-        #title
-          %h1= @page_title
         = yield
       #footer
         != render :partial => '/layouts/footer'
