@@ -1,0 +1,14 @@
+#indexlinks
+  = link_to 'Ask something', :new_question
+
+#table
+  %table
+    %tr.header
+      %th Question
+      %th Answer
+      %th{:width => 100} Posted At
+    - collection.each do |answer|
+      %tr
+        %td= h answer.body
+        %td= h answer.question.body
+        %td= Date.parse(answer.created_at.to_s)
