@@ -1,3 +1,3 @@
 class QuestionsController < ApplicationController
-  resource_controller :singleton
+  resource_controller
 end
