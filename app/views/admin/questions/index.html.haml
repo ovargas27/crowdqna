@@ -1,0 +1,17 @@
+#table
+  %table
+    %tr.header
+      %th{:width => 350}  Question
+      %th Answer
+      %th{:width => 100} Posted At
+      %th Actions
+    - collection.each do |question|
+      %tr
+        %td= h question.body
+        %td= h (question.answer ? question.answer.body : "")
+        %td= Date.parse(question.created_at.to_s)
+        %td
+          - if question.answer
+            = link_to 'Edit', edit_admin_question_answer_url(question)
+          - else
+            = link_to 'Answer now', new_admin_question_answer_url(question)

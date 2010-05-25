@@ -1,6 +1,6 @@
 class Answer < ActiveRecord::Base
   # Relations
-  belongs_to :question
+  belongs_to :question, :touch => true
 
   # State Machine
   state_machine :state, :initial => :asked do

@@ -12,9 +12,9 @@
 ActiveRecord::Schema.define(:version => 20100525214721) do
 
   create_table "answers", :force => true do |t|
-    t.integer  "question_id"
     t.text     "body"
     t.string   "state"
+    t.integer  "question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
