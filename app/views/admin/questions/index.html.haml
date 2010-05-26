@@ -1,21 +1,25 @@
+#title
+  %h1= t('admin.questions.index.title')
 #table
   %table
     %tr.header
-      %th{:width => 350}  Question
+      %th{:width => 350}= t('admin.questions.index.question')
       %th Answer
-      %th{:width => 100} Posted At
+      %th{:width => 100}= t('admin.questions.index.posted_at')
       %th Actions
     - collection.each do |question|
       %tr
         %td= h question.body
         %td= h (question.answer ? question.answer.body : "")
-        %td= Date.parse(question.created_at.to_s)
-        %td
+        %td= l Date.parse(question.created_at.to_s)
+        %td{:width => 100}
           - if question.answer
-            = link_to 'Edit', edit_admin_question_answer_url(question)
+            = link_to t('admin.questions.index.edit'), edit_admin_question_answer_url(question)
             |
-            = link_to 'Delete Answer', admin_question_answer_url(question), :method => :delete, :confirm => "Are you sure?"
+            = link_to t('admin.questions.index.delete_answer'), admin_question_answer_url(question), :method => :delete, :confirm => t('admin.questions.index.sure')
             |
-            = link_to 'Delete Question', admin_question_url(question), :method => :delete, :confirm => "Are you sure?"
           - else
-            = link_to 'Answer now', new_admin_question_answer_url(question)
+            = link_to t('admin.questions.index.answer_now'), new_admin_question_answer_url(question)
+            |
+            = link_to t('admin.questions.index.delete_question'), admin_question_url(question), :method => :delete, :confirm => t('admin.questions.index.sure')
+            

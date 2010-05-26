@@ -1,9 +1,9 @@
 #title
-  %h1 Answer!
+  %h1= t('admin.answers.new.title')
 %div= h parent_object.body
 #form
   -form_for object, :url => admin_question_answer_url do |f|
     %div= f.text_area :body
-    .button= f.submit 'Answer'
+    .button= f.submit t('admin.answers.new.submit')
 
-#errors= error_messages_for :object
+#errors= error_messages_for :answer

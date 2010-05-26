@@ -1,16 +1,16 @@
 #title
-  %h1 Crowd Interactive Question board!
+  %h1= t 'answers.index.title'
 #indexlinks
-  = link_to 'Ask something', :new_question
+  = link_to t('answers.index.new'), :new_question
 
 #table
   %table
     %tr.header
-      %th Question
-      %th Answer
-      %th{:width => 100} Posted At
+      %th= t 'answers.index.question'
+      %th= t 'answers.index.answer'
+      %th{:width => 100}= t 'answers.index.posted_at'
     - collection.each do |answer|
       %tr
         %td= h answer.question.body
         %td= h answer.body
-        %td= Date.parse(answer.created_at.to_s)
+        %td= l Date.parse(answer.created_at.to_s)

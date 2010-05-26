@@ -1,8 +1,8 @@
 #title
-  %h1 Thank you!
+  %h1= t('admin.answers.show.title')
 
-%div
+%p
   %b= h parent_object.body
-%div= h object.body
+  %div= h object.body
 #indexlinks
-  = link_to "Back to questions", :admin_questions
+  = link_to t('admin.answers.show.back'), :admin_questions

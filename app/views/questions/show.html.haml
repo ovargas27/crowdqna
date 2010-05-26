@@ -1,11 +1,12 @@
 #title
-  %h1 Thank you!
+  %h1= t("questions.show.title")
 
-%div
-  %b Submitted question:
+%p
+  %b= "#{t('questions.show.question')}: "
+  %br/
   = h object.body
 
 #indexlinks
-  = link_to "Post another question", :new_question
+  = link_to t('questions.show.new'), :new_question
   |
-  = link_to "Back Home", :root
+  = link_to t('questions.show.home'), :root

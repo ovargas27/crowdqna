@@ -1,8 +1,9 @@
 #title
-  %h1 Ask something!
+  %h1= t 'questions.new.title'
+%p= t('questions.new.explanation')
 #form
   -form_for object do |f|
     %div= f.text_area :body
-    .button= f.submit 'Ask'
+    .button= f.submit t 'questions.new.submit'
 
-#errors= error_messages_for :object
+#errors= error_messages_for :question
