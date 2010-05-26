@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem 'state_machine'
   config.gem 'resource_controller'
   config.gem 'faker'
+  config.gem 'rails-settings', :lib => 'settings'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
