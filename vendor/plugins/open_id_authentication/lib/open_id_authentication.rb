@@ -147,7 +147,8 @@ module OpenIdAuthentication
     end
 
     def requested_url
-      "#{request.protocol + request.host_with_port + request.relative_url_root + request.path}"
+      # "#{request.protocol + request.host_with_port + request.relative_url_root + request.path}"
+      request.url
     end
 
     def realm

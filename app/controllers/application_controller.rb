@@ -1,6 +1,6 @@
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
-require 'gapps_openid'
+# require 'gapps_openid'
 
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
     authenticate_with_open_id(openid_url, :required => [:nickname, :email]) do |result, identity_url, registration|
       if result.successful?
         session[:authenticated] = true
-        redirect_to :success
+        redirect_to :root
       else
         redirect_to :fail_success
       end

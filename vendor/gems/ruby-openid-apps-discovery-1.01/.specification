@@ -1,0 +1,84 @@
+--- !ruby/object:Gem::Specification 
+name: ruby-openid-apps-discovery
+version: !ruby/object:Gem::Version 
+  hash: 13
+  prerelease: false
+  segments: 
+  - 1
+  - 1
+  version: "1.01"
+platform: ruby
+authors: []
+
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-01-12 00:00:00 -06:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: ruby-openid
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 5
+        segments: 
+        - 2
+        - 1
+        - 7
+        version: 2.1.7
+  type: :runtime
+  version_requirements: *id001
+description: |
+  Extension to ruby-openid that enables discovery for Google Apps domains
+
+email: 
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/gapps_openid.rb
+- lib/ca-bundle.crt
+has_rdoc: true
+homepage: 
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: Google Apps support for ruby-openid
+test_files: []
+

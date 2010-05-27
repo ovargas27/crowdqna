@@ -25,7 +25,7 @@ Rails::Initializer.run do |config|
   config.gem 'resource_controller'
   config.gem 'faker'
   config.gem 'rails-settings', :lib => 'settings'
-#  config.gem 'ruby-openid'
+  config.gem 'ruby-openid-apps-discovery', :lib => 'gapps_openid'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -47,4 +47,4 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
-I18n.locale = 'es-MX'
+I18n.default_locale = 'es-MX'
