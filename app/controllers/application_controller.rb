@@ -15,14 +15,14 @@ class ApplicationController < ActionController::Base
       open_id_authentication("https://www.google.com/accounts/o8/site-xrds?hd=crowdint.com")
     end
   end
-  
+
   def open_id_authentication(openid_url)
     authenticate_with_open_id(openid_url, :required => [:nickname, :email]) do |result, identity_url, registration|
       if result.successful?
         session[:authenticated] = true
         redirect_to :root
       else
-        redirect_to :fail_success
+        redirect_to :fail
       end
     end
   end

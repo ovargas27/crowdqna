@@ -7,4 +7,5 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.resources :questions, :has_one => :answer
   end
+  map.resource :fail, :only => :show, :controller => :fail
 end
