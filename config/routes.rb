@@ -8,4 +8,5 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :questions, :has_one => :answer
   end
   map.resource :fail, :only => :show, :controller => :fail
+  map.admin_index 'admin', :controller => 'admin/questions', :action => 'index'
 end
