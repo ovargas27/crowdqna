@@ -11,7 +11,7 @@
       %tr
         %td= h question.body
         %td= h (question.answer ? question.answer.body : "")
-        %td= l Date.parse(question.created_at.to_s)
+        %td= Date.parse(question.created_at.to_s)
         %td{:width => 100}
           - if question.answer
             = link_to t('admin.questions.index.edit'), edit_admin_question_answer_url(question)
