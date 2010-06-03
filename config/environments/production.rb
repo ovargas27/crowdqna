@@ -26,3 +26,14 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+# these options are only needed if you choose smtp delivery
+config.action_mailer.smtp_settings = {
+  :enable_starttls_auto => true,
+  :address => "smtp.gmail.com",
+  :port => "587",
+  :domain => "localhost.localdomain",
+  :authentication => :plain,
+  :user_name => "taco.manager",
+  :password => "rac123456"
+}
+
