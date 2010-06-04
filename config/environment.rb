@@ -26,6 +26,7 @@ Rails::Initializer.run do |config|
   config.gem 'faker'
   config.gem 'rails-settings', :lib => 'settings'
   config.gem 'ruby-openid-apps-discovery', :lib => 'gapps_openid'
+  config.gem 'hoptoad_notifier'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
