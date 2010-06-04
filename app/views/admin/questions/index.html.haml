@@ -5,21 +5,18 @@
     %tr.header
       %th{:width => 350}= t('admin.questions.index.question')
       %th Answer
-      %th{:width => 100}= t('admin.questions.index.posted_at')
-      %th Actions
+      %th.centered{:width => 100}= t('admin.questions.index.posted_at')
+      %th.centered{:width => 100} Actions
     - collection.each do |question|
       %tr
         %td= h question.body
         %td= h (question.answer ? question.answer.body : "")
-        %td= Date.parse(question.created_at.to_s)
-        %td{:width => 100}
+        %td.centered= Date.parse(question.created_at.to_s)
+        %td.actions.centered
           - if question.answer
-            = link_to t('admin.questions.index.edit'), edit_admin_question_answer_url(question)
-            |
-            = link_to t('admin.questions.index.delete_answer'), admin_question_answer_url(question), :method => :delete, :confirm => t('admin.questions.index.sure')
-            |
+            %div= link_to t('admin.questions.index.edit'), edit_admin_question_answer_url(question)
+            %div= link_to t('admin.questions.index.delete_answer'), admin_question_answer_url(question), :method => :delete, :confirm => t('admin.questions.index.sure')
           - else
-            = link_to t('admin.questions.index.answer_now'), new_admin_question_answer_url(question)
-            |
-            = link_to t('admin.questions.index.delete_question'), admin_question_url(question), :method => :delete, :confirm => t('admin.questions.index.sure')
+            %div= link_to t('admin.questions.index.answer_now'), new_admin_question_answer_url(question)
+            %div= link_to t('admin.questions.index.delete_question'), admin_question_url(question), :method => :delete, :confirm => t('admin.questions.index.sure')
             
